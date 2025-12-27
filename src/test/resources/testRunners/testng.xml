@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" verbose="5" configfailurepolicy="continue" parallel="tests">
+    <listeners>
+        <listener class-name="com.qa.openCart.listeners.ExtentReportListener"/>
+        <listener class-name="com.qa.openCart.listeners.TestAllureListener"></listener>
+        <listener class-name="com.qa.openCart.listeners.AnnotationTransformer"></listener>
+    </listeners>
+    <test name="Accounts Page Test">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.qa.openCart.tests.AccountsPageTest">
+            </class>
+        </classes>
+    </test>
+    <test name="Login Page Test">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.qa.openCart.tests.LoginPageTest">
+            </class>
+        </classes>
+    </test>
+   <!-- <test name="Register Page Test">
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="com.qa.openCart.tests.RegisterPageTest">
+            </class>
+        </classes>
+    </test>-->
+</suite>
