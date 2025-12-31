@@ -22,6 +22,12 @@ public class OptionManager {
         if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
             op.addArguments("--incognito");
         }
+        if (Boolean.parseBoolean(prop.getProperty("sandbox"))) {
+            op.addArguments("--no-sandbox");
+        }
+        if (Boolean.parseBoolean(prop.getProperty("shm"))) {
+            op.addArguments("--disable-dev-shm-usage");
+        }
         return op;
     }
 
